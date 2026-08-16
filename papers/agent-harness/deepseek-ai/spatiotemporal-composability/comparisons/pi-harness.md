@@ -18,3 +18,12 @@
 - **Pi 更像“可直接使用的 Harness 产品哲学”**。
 - **Cordis 更像“动态 Harness 应该如何安全生老病死的底层 Runtime 理论”**。
 - 最值得实践的是混合设计：**Pi-style Minimal Core + Cordis-style Lifecycle / Dependency Semantics**。
+
+## 形式化分析后的修正
+
+- Cordis 的优势不是功能更多，而是把 disposer ownership、provider identity、dependent drain 和 failure rollback 纳入一套生命周期语义。
+- Cordis 的定理不能直接移植成 Pi 的保证；必须先约束所有共享 effect 经过 Context，并验证 inverse、independence、acyclicity 与 provision totality。
+- Pi 风格开放扩展若保留 ambient filesystem/process/network access，就超出 Cordis Context boundary；这部分仍需 permission、sandbox 和 compensation。
+- 更现实的融合路径是先引入 EffectScope 和显式 Capability Graph，再逐步加入 target/committed view 与 reconciliation，而不是一次性复制 Cordis loader。
+
+更广泛的方案比较见 [related-systems.md](related-systems.md)。

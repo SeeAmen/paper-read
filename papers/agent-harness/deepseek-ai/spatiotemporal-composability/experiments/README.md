@@ -56,3 +56,5 @@ mini-harness/
 ├── plugins/
 └── tests/
 ```
+
+完整的正例、反例、汇合性与规模验证设计见 [validation-plan.md](validation-plan.md)。在实验实际运行前，论文状态保持“已通读”，不标记为“已验证”。

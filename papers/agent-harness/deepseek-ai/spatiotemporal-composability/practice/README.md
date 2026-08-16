@@ -44,3 +44,5 @@
 ## 工程原则
 
 用 Pi 的思想保持 Core 足够小，用 Cordis 的思想加强 Plugin 的生命周期、回滚和依赖语义。
+
+具体接口、卸载协议、安全边界、外部 emission 处理和分阶段实施见 [Agent Harness 落地蓝图](agent-harness-blueprint.md)。

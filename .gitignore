@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editors and temporary files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local environments and caches
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+node_modules/
+
+# Experiment outputs that should be explicitly curated before committing
+tmp/
+temp/
+*.log
+
+# Paper PDFs stay local unless redistribution permission is verified.
+# Use `git add -f <file>` only after documenting the license in SOURCE.md.
+papers/**/source/*.pdf
